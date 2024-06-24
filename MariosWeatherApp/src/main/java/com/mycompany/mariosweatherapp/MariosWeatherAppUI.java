@@ -173,6 +173,7 @@ public class MariosWeatherAppUI extends javax.swing.JFrame {
         initialiseChart(hwData.getHourly(HistoricalWeatherData.hourlyParameterDefs.temperature_2m));
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    //Creating a line chart in JFrame, source: https://zetcode.com/java/jfreechart/
     private void initialiseChart(List<Object> stringData) {
         
         XYDataset dataset = createDataset(stringData);

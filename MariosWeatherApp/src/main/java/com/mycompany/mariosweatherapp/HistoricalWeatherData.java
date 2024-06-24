@@ -16,9 +16,10 @@ public class HistoricalWeatherData {
     HistoricalWeatherData(CustomCityLocation requestedLocation, InlineResponse200 historicalWeatherAPIresponse) {
     
         this.requestedLocation = requestedLocation;
-    //this.latitude = historicalWeatherAPIresponse.getLatitude();
-    //this.longitude = historicalWeatherAPIresponse.getLongitude();
+        
         castResponseHourlyToLinkedTreeMap(historicalWeatherAPIresponse.getHourly());
+        
+        //todo - weather code meaning, help: https://gist.github.com/Oskar1504/c315a059738437ed224e88f81cc45512
         castResponseDailyToLinkedTreeMap(historicalWeatherAPIresponse.getDaily());
     }
    
@@ -28,30 +29,20 @@ public class HistoricalWeatherData {
             this.hourly = (LinkedTreeMap<String, List<Object>>) responseHourly;
             }
     }
-    private void castResponseDailyToLinkedTreeMap(Object responseHourly) {
-        if (responseHourly instanceof LinkedTreeMap) {
+    private void castResponseDailyToLinkedTreeMap(Object responseDaily) {
+        if (responseDaily instanceof LinkedTreeMap) {
             // Cast it to LinkedTreeMap
-            this.daily = (LinkedTreeMap<String, List<Object>>) responseHourly;
+            this.daily = (LinkedTreeMap<String, List<Object>>) responseDaily;
         }
     }
     
+    //specific hourly keys
     public static enum hourlyParameterDefs {
         time, temperature_2m, weather_code;
     }
     
     public List<Object> getHourly(hourlyParameterDefs parameter) {
-        
-        //List<> temp = this.hourly.get(parameter.toString());
-               
-        for(Object a : this.hourly.get(parameter.toString())){
-            System.out.println(a);
-        }
-        /*for(String key : hourly.keySet()) {
-            System.out.println("key: " + key);
-            System.out.println("values: " + hourly.get(key));
-        }*/
-        return this.hourly.get(parameter.toString());
-        //return hourly.get(parameter.toString());
 
+        return this.hourly.get(parameter.toString());
     }
 }

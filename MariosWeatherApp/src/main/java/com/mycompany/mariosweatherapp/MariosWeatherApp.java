@@ -44,11 +44,10 @@ public class MariosWeatherApp {
         String timezone = "auto"; // String | If `timezone` is set, all timestamps are returned as local-time and data is returned starting at 0:00 local-time. Any time zone name from the [time zone database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) is supported.
 
         try {
-            System.out.println("aaaaaaaaa");
             
             InlineResponse200 result = apiInstance.v1ArchiveGet(startDate, endDate, latitude, longitude, hourly, daily, temperatureUnit, windSpeedUnit, timeformat, timezone);
 
-            System.out.println(result);
+            System.out.println("Response:\n" + result);
 
             this.hwData = new HistoricalWeatherData(requestLocation, result);
             
@@ -62,5 +61,4 @@ public class MariosWeatherApp {
         
         return this.hwData;
     }
-  
 }
