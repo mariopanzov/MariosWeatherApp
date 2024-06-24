@@ -41,6 +41,13 @@
              <!-- dependencies are needed for the client being generated -->
     <dependencies>
         
+        
+        <dependency>
+            <groupId>org.jfree</groupId>
+            <artifactId>jfreechart</artifactId>
+            <version>1.5.4</version>
+        </dependency>
+        
         <dependency>
             <groupId>javax.ws.rs</groupId>
             <artifactId>javax.ws.rs-api</artifactId>
