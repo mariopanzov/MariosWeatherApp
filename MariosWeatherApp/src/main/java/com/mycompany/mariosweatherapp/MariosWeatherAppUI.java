@@ -195,7 +195,7 @@ public class MariosWeatherAppUI extends javax.swing.JFrame {
 
     private XYDataset createDataset(List<Object> stringData) {
 
-        var series = new XYSeries("Teperatire C\u00b0");
+        var series = new XYSeries("Teperature C\u00b0");
         
         for(int i = 0; i < stringData.size(); i++)
         {
@@ -211,9 +211,9 @@ public class MariosWeatherAppUI extends javax.swing.JFrame {
     private JFreeChart createChart(XYDataset dataset) {
 
         JFreeChart chart = ChartFactory.createXYLineChart(
-                "Temperature",
+                "",
                 "Hour of day",
-                "Teperatire C\u00b0",
+                "Teperature C\u00b0",
                 dataset,
                 PlotOrientation.VERTICAL,
                 true,
@@ -238,10 +238,10 @@ public class MariosWeatherAppUI extends javax.swing.JFrame {
 
         chart.getLegend().setFrame(BlockBorder.NONE);
 
-        chart.setTitle(new TextTitle("Temperatire",
-                new Font("Serif", java.awt.Font.BOLD, 18)
-        )
-        );
+        //chart.setTitle(new TextTitle("Temperature",
+                //new Font("Serif", java.awt.Font.BOLD, 18)
+        //)
+        //);
 
         return chart;
     }
