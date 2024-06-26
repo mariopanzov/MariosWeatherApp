@@ -304,7 +304,7 @@ public class MariosWeatherAppUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
-        // TODO add your handling code here:
+        updateTodaysWeatherData();
     }//GEN-LAST:event_jComboBox3ActionPerformed
 
     
