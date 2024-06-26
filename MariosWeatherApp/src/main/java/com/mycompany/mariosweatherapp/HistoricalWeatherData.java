@@ -1,7 +1,7 @@
 
 package com.mycompany.mariosweatherapp;
 
-import io.swagger.client.model.InlineResponse200;
+import io.swagger.historical_weather_client.model.InlineResponse200;
 import com.google.gson.internal.LinkedTreeMap;
 
 import java.util.List;
@@ -21,6 +21,10 @@ public class HistoricalWeatherData {
         
         //todo - weather code meaning, help: https://gist.github.com/Oskar1504/c315a059738437ed224e88f81cc45512
         castResponseDailyToLinkedTreeMap(historicalWeatherAPIresponse.getDaily());
+    }
+    
+    public CustomCityLocation getLocationData() {
+        return this.requestedLocation;
     }
    
     private void castResponseHourlyToLinkedTreeMap(Object responseHourly) {
