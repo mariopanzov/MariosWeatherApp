@@ -38,10 +38,16 @@ public class MariosWeatherAppUI extends javax.swing.JFrame {
     private MariosWeatherApp mariosWeatherApp;
     private List<LocalDate> dates;
     
-    ImageIcon wSun = new ImageIcon("src/main/resources/sun.png");
-    ImageIcon wCloud = new ImageIcon("src/main/resources/cloud.png");
-    ImageIcon wRain = new ImageIcon("src/main/resources/rain.png");
-    ImageIcon wThunder = new ImageIcon("src/main/resources/thunder.png");
+    //ImageIcon wSun = new ImageIcon("src/main/resources/sun.png");
+    //ImageIcon wCloud = new ImageIcon("src/main/resources/cloud.png");
+    //ImageIcon wRain = new ImageIcon("src/main/resources/rain.png");
+    //ImageIcon wThunder = new ImageIcon("src/main/resources/thunder.png");
+    
+    // getting images from class path, help: https://stackoverflow.com/questions/6373021/how-to-includes-all-images-in-jar-file-using-eclipse
+    ImageIcon wSun = new ImageIcon(getClass().getResource("/sun.png"));
+    ImageIcon wCloud = new ImageIcon(getClass().getResource("/cloud.png"));
+    ImageIcon wRain = new ImageIcon(getClass().getResource("/rain.png"));
+    ImageIcon wThunder = new ImageIcon(getClass().getResource("/thunder.png"));
 
     /**
      * Creates new form MariosWeatherAppUI
