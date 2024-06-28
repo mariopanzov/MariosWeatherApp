@@ -12,6 +12,7 @@ public record Result(
         String feature_code,
         String country_code,
         int admin1_id,
+        int admin2_id,
         int admin3_id,
         int admin4_id,
         String timezone,
@@ -20,6 +21,7 @@ public record Result(
         int country_id,
         String country,
         String admin1,
+        String admin2,
         String admin3,
         String admin4) {
     
@@ -34,6 +36,7 @@ public record Result(
                 "SI", // country_code
                 3195505, // admin1_id
                 0, // admin3_id
+                0, // admin3_id
                 0, // admin4_id
                 "Europe/Ljubljana", // timezone
                 95171, // population
@@ -41,6 +44,7 @@ public record Result(
                 3190538, // country_id
                 "Slovenia", // country
                 "Maribor", // admin1
+                null, // admin3
                 null, // admin3
                 null // admin4
         );
