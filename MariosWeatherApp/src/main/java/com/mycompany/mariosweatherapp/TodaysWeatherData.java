@@ -33,7 +33,7 @@ public class TodaysWeatherData {
         
     }
     
-    public String getCurrentDAteTime() {
+    public String getCurrentDateTime() {
         return this.currentDateTime;
     }
     
