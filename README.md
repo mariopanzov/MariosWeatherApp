@@ -1,7 +1,7 @@
 # Mario's Weather App
 A weather app using the Forecast Weather API, the Historical Weather API and Geocoding API provided by Open Meteo (https://open-meteo.com/).
 
-The code for the clients used to call the Forecast Weather API and the Historical Weather API was generatied using Swagger Editor (https://editor.swagger.io/) with the OpenAPI specifications provided here (https://github.com/open-meteo/open-meteo).
+The code for the clients used to call the Forecast Weather API and the Historical Weather API was generated using Swagger Editor (https://editor.swagger.io/) with the OpenAPI specifications provided here (https://github.com/open-meteo/open-meteo).
 
 ## Temperature History
 
